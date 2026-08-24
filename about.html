@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Coffee Nook | Order Coffee Online</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar" id="navbar">
+    <div class="nav-left"><button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button><a class="logo" href="#top">COFFEE <span>NOOK</span></a></div>
+    <div class="nav-order"><div class="order-switcher" aria-label="Order mode"><button class="mode active">Delivery</button><button class="mode">Pick-Up</button></div><label class="nav-field search-field"><span aria-hidden="true">⌕</span><input type="search" placeholder="Find in Coffee Nook..." aria-label="Search Coffee Nook"></label><button class="nav-field location" aria-label="Set delivery location"><span aria-hidden="true">⌖</span> Enter Delivery Location</button></div>
+    <div class="nav-actions"><button class="cart-button" id="cartButton" aria-controls="cartDrawer" aria-expanded="false">Cart <span class="cart-count" id="cartCount">0</span></button><button class="signin" id="signinButton">Login / Sign In</button></div>
+  </header>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation"><a href="#hot-coffee">Menu</a><a href="#story">Our story</a><a href="#footer">Contact</a></nav>
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title"><div class="hero-photo"><img src="coffee.jpg" alt="Freshly brewed coffee and pastries at Coffee Nook"></div><div class="hero-panel"><p class="eyebrow">Roasted locally · delivered happily</p><h1 id="hero-title">Freshly Roasted.<br>Handcrafted Daily.</h1><p>Small-batch coffee, baked-warm treats, and your best morning yet — brought right to your door.</p><a class="hero-cta" href="#hot-coffee">ORDER NOW <span>→</span></a></div><div class="hero-accent"><span>Free delivery on orders over Rs. 1,500</span><a href="#hot-coffee">Start an order <span>→</span></a></div></section>
+    <nav class="menu-tabs" aria-label="Menu categories"><a class="tab active" href="#all">All</a><a class="tab" href="#hot-coffee">Hot Coffee</a><a class="tab" href="#cold-brews">Cold Brews</a><a class="tab" href="#bakery">Fresh Bakery</a><a class="tab" href="#espresso-bar">Espresso Bar</a><a class="tab" href="#desserts">Desserts</a></nav>
+    <section class="catalog" aria-label="Coffee Nook menu"><div class="section-heading"><p class="eyebrow">The daily selection</p><h2>Made for your moment</h2></div><div class="product-grid">
+      <article class="menu-item" id="hot-coffee" data-category="hot-coffee"><img src="coffee.jpg" alt="Double espresso"><div class="card-content"><div class="card-top"><span class="tag">Bold roast</span><span class="price">Rs. 450</span></div><h3>Double Espresso</h3><p>Rich, syrupy and pulled to perfection from our house blend.</p><button class="add-button">+ Add to Order</button></div></article>
+      <article class="menu-item" data-category="hot-coffee"><img src="coffee.jpg" alt="Caramel latte"><div class="card-content"><div class="card-top"><span class="tag">Mellow roast</span><span class="price">Rs. 650</span></div><h3>Caramel Latte</h3><p>Silky steamed milk, espresso, and a buttery caramel finish.</p><button class="add-button">+ Add to Order</button></div></article>
+      <article class="menu-item" id="cold-brews" data-category="cold-brews"><img src="coffee.jpg" alt="Cold brew coffee"><div class="card-content"><div class="card-top"><span class="tag cool">Slow steeped</span><span class="price">Rs. 620</span></div><h3>Vanilla Cold Brew</h3><p>Velvety smooth, 18-hour cold brew with a whisper of vanilla.</p><button class="add-button">+ Add to Order</button></div></article>
+      <article class="menu-item" id="bakery" data-category="bakery"><img src="coffee.jpg" alt="Fresh butter croissant"><div class="card-content"><div class="card-top"><span class="tag fresh">Baked today</span><span class="price">Rs. 500</span></div><h3>Butter Croissant</h3><p>Golden, flaky layers with a tender butter-rich centre.</p><button class="add-button">+ Add to Order</button></div></article>
+      <article class="menu-item" id="espresso-bar" data-category="espresso-bar"><img src="coffee.jpg" alt="Coffee Nook flat white"><div class="card-content"><div class="card-top"><span class="tag">House favourite</span><span class="price">Rs. 700</span></div><h3>Maple Flat White</h3><p>Velvet microfoam, espresso and a balanced maple note.</p><button class="add-button">+ Add to Order</button></div></article>
+      <article class="menu-item" id="desserts" data-category="desserts"><img src="coffee.jpg" alt="Chocolate dessert"><div class="card-content"><div class="card-top"><span class="tag fresh">Made today</span><span class="price">Rs. 580</span></div><h3>Chocolate Brownie</h3><p>Fudgy dark chocolate brownie with a crackly top.</p><button class="add-button">+ Add to Order</button></div></article>
+    </div><p class="no-search-results" id="noSearchResults" hidden>No menu items match your search. Try another coffee or treat.</p></section>
+  </main>
+  <footer class="site-footer" id="footer"><a class="logo" href="#top">COFFEE <span>NOOK</span></a><p>Open daily · 7:00 AM – 8:00 PM</p><p>© 2026 The Coffee Nook</p></footer>
+  <div class="drawer-backdrop" id="drawerBackdrop" hidden></div>
+  <aside class="dashboard cart-drawer" id="cartDrawer" aria-label="Your order" aria-hidden="true">
+    <div class="dashboard-head"><div><p class="eyebrow">Your order</p><h2>Cart</h2></div><button class="close-panel" data-close aria-label="Close cart">×</button></div>
+    <div class="cart-items" id="cartItems"><p class="empty-cart">Your cart is waiting for something delicious.</p></div>
+    <div class="bill"><div><span>Subtotal</span><strong id="subtotal">Rs. 0</strong></div><div><span>Delivery</span><strong id="deliveryFee">Rs. 0</strong></div><div class="bill-total"><span>Total</span><strong id="total">Rs. 0</strong></div><button class="checkout-button" id="checkoutButton" disabled>Proceed to Checkout</button></div>
+  </aside>
+  <section class="dashboard popover-panel" id="locationPanel" aria-label="Delivery location" aria-hidden="true"><div class="dashboard-head"><div><p class="eyebrow">Delivery details</p><h2>Where should we deliver?</h2></div><button class="close-panel" data-close aria-label="Close location">×</button></div><label class="panel-label">Delivery address<input id="locationInput" placeholder="Enter your address"></label><button class="checkout-button" id="saveLocation">Save location</button></section>
+  <section class="dashboard popover-panel" id="pickupPanel" aria-label="Pick-up details" aria-hidden="true"><div class="dashboard-head"><div><p class="eyebrow">Pick-Up details</p><h2>Choose your branch</h2></div><button class="close-panel" data-close aria-label="Close pick-up details">×</button></div><label class="panel-label">Pick-up branch<select id="pickupBranch"><option value="Coffee Nook DHA">Coffee Nook DHA</option><option value="Coffee Nook Gulberg">Coffee Nook Gulberg</option><option value="Coffee Nook Clifton">Coffee Nook Clifton</option></select></label><label class="panel-label">Ready for pick-up<select id="pickupTime"><option>As soon as possible · 20–25 min</option><option>In 30 minutes</option><option>In 45 minutes</option></select></label><button class="checkout-button" id="savePickup">Confirm Pick-Up</button></section>
+  <section class="dashboard popover-panel account-panel" id="signinPanel" aria-label="Login or sign up" aria-hidden="true"><div class="dashboard-head"><div><p class="eyebrow" id="accountEyebrow">Welcome back</p><h2 id="accountTitle">Sign in to Coffee Nook</h2></div><button class="close-panel" data-close aria-label="Close account panel">×</button></div><div class="account-tabs" role="tablist"><button class="account-tab active" data-account-mode="login" role="tab">Log In</button><button class="account-tab" data-account-mode="signup" role="tab">Sign Up</button></div><form id="accountForm" novalidate><div id="accountFields"></div><p class="form-message" id="accountMessage" aria-live="polite"></p><button class="checkout-button" id="accountSubmit" type="submit">Log In</button></form></section>
+  <section class="dashboard payment-panel" id="paymentPanel" aria-label="Choose payment method" aria-hidden="true"><div class="dashboard-head"><div><p class="eyebrow">Checkout · Step 2 of 2</p><h2>Payment details</h2></div><button class="close-panel" data-close aria-label="Close payment options">×</button></div><p class="payment-summary" id="paymentSummary"></p><div class="payment-options"><label class="payment-option selected"><input type="radio" name="payment" value="Cash on Delivery" checked><span class="payment-icon">₹</span><span><strong>Cash on Delivery</strong><small>Pay cash when your order arrives</small></span></label><label class="payment-option"><input type="radio" name="payment" value="Credit / Debit Card"><span class="payment-icon">▣</span><span><strong>Credit / Debit Card</strong><small>Pay securely with your card</small></span></label><label class="payment-option"><input type="radio" name="payment" value="Online Payment"><span class="payment-icon">⌁</span><span><strong>Online Payment</strong><small>Pay using your wallet or bank app</small></span></label></div><div class="payment-details" id="paymentDetails"></div><button class="checkout-button" id="confirmOrderButton">Place Cash on Delivery Order</button></section>
+  <section class="dashboard confirmation-panel" id="confirmationPanel" aria-label="Order confirmed" aria-hidden="true"><div class="confirmation-icon">✓</div><p class="eyebrow">Order confirmed</p><h2>It’s on its way.</h2><p class="confirmation-copy">We’ve received your order and are preparing your Coffee Nook favourites.</p><p class="confirmation-total" id="confirmationTotal"></p><button class="checkout-button" id="continueButton">Continue browsing</button></section>
+  <script>
+    const hamburger=document.getElementById('hamburger'),mobileNav=document.getElementById('mobileNav'),backdrop=document.getElementById('drawerBackdrop');
+    const panels=document.querySelectorAll('.dashboard'); let cart=[];
+    hamburger.addEventListener('click',()=>{const open=mobileNav.classList.toggle('open');hamburger.classList.toggle('open',open);hamburger.setAttribute('aria-expanded',open)});
+    document.querySelectorAll('.mode').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('.mode').forEach(b=>b.classList.remove('active'));button.classList.add('active')}));
+    document.querySelectorAll('.tab').forEach(tab=>tab.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));tab.classList.add('active')}));
+    function openPanel(id){panels.forEach(p=>{p.classList.remove('is-open');p.setAttribute('aria-hidden','true')});const panel=document.getElementById(id);panel.classList.add('is-open');panel.setAttribute('aria-hidden','false');backdrop.hidden=false;document.getElementById('cartButton').setAttribute('aria-expanded',id==='cartDrawer')}
+    function closePanels(){panels.forEach(p=>{p.classList.remove('is-open');p.setAttribute('aria-hidden','true')});backdrop.hidden=true;document.getElementById('cartButton').setAttribute('aria-expanded','false')}
+    document.getElementById('cartButton').addEventListener('click',()=>openPanel('cartDrawer'));document.querySelector('.location').addEventListener('click',()=>openPanel('locationPanel'));document.getElementById('signinButton').addEventListener('click',()=>openPanel('signinPanel'));backdrop.addEventListener('click',closePanels);document.querySelectorAll('[data-close]').forEach(button=>button.addEventListener('click',closePanels));
+    const money=value=>'Rs. '+value.toLocaleString();function renderCart(){const items=document.getElementById('cartItems'),count=document.getElementById('cartCount'),subtotal=cart.reduce((sum,item)=>sum+item.price*item.quantity,0),delivery=subtotal&&subtotal<1500?150:0;count.textContent=cart.reduce((sum,item)=>sum+item.quantity,0);items.innerHTML=cart.length?cart.map((item,index)=>`<div class="cart-line"><div><strong>${item.name}</strong><small>${money(item.price)} each</small></div><div class="quantity"><button data-change="${index}|-1" aria-label="Remove one ${item.name}">−</button><span>${item.quantity}</span><button data-change="${index}|1" aria-label="Add one ${item.name}">+</button></div></div>`).join(''):'<p class="empty-cart">Your cart is waiting for something delicious.</p>';document.getElementById('subtotal').textContent=money(subtotal);document.getElementById('deliveryFee').textContent=delivery?money(delivery):'Free';document.getElementById('total').textContent=money(subtotal+delivery);document.getElementById('checkoutButton').disabled=!cart.length;document.querySelectorAll('[data-change]').forEach(button=>button.addEventListener('click',()=>{const [index,change]=button.dataset.change.split('|').map(Number);cart[index].quantity+=change;if(!cart[index].quantity)cart.splice(index,1);renderCart()}));}
+    document.querySelectorAll('.add-button').forEach(button=>button.addEventListener('click',()=>{const card=button.closest('.menu-item'),name=card.querySelector('h3').textContent,price=Number(card.querySelector('.price').textContent.replace(/[^0-9]/g,'')),existing=cart.find(item=>item.name===name);existing?existing.quantity++:cart.push({name,price,quantity:1});renderCart();button.textContent='Added ✓';button.classList.add('added');setTimeout(()=>{button.textContent='+ Add to Order';button.classList.remove('added')},850)}));
+    document.getElementById('saveLocation').addEventListener('click',()=>{const value=document.getElementById('locationInput').value.trim();if(value){document.querySelector('.location').lastChild.textContent=' '+value;closePanels()}});const paymentDetails=document.getElementById('paymentDetails'),confirmOrder=document.getElementById('confirmOrderButton');function showPaymentDetails(){const method=document.querySelector('input[name="payment"]:checked').value;document.querySelectorAll('.payment-option').forEach(o=>o.classList.toggle('selected',o.querySelector('input').value===method));if(method==='Cash on Delivery'){paymentDetails.innerHTML='<label class="panel-label">Mobile number<input required type="tel" placeholder="03XX XXX XXXX"></label><p class="payment-note">Have the exact amount ready. You will pay the rider when the order is delivered.</p>';confirmOrder.textContent='Place Cash on Delivery Order'}else if(method==='Credit / Debit Card'){paymentDetails.innerHTML='<label class="panel-label">Name on card<input required placeholder="Cardholder name"></label><label class="panel-label">Card number<input required inputmode="numeric" maxlength="19" placeholder="1234 5678 9012 3456"></label><div class="field-row"><label class="panel-label">Expiry<input required placeholder="MM / YY"></label><label class="panel-label">CVV<input required inputmode="numeric" maxlength="3" placeholder="123"></label></div>';confirmOrder.textContent='Pay & Place Order'}else{paymentDetails.innerHTML='<label class="panel-label">Mobile number / wallet ID<input required placeholder="03XX XXX XXXX"></label><label class="panel-label">Choose wallet<select><option>JazzCash</option><option>EasyPaisa</option><option>Bank transfer</option></select></label><p class="payment-note">You will be redirected to securely complete your payment.</p>';confirmOrder.textContent='Continue to Online Payment'}}document.querySelectorAll('input[name="payment"]').forEach(input=>input.addEventListener('change',showPaymentDetails));document.getElementById('checkoutButton').addEventListener('click',()=>{document.getElementById('paymentSummary').textContent='Order total: '+document.getElementById('total').textContent;showPaymentDetails();openPanel('paymentPanel')});document.getElementById('confirmOrderButton').addEventListener('click',()=>{const required=[...paymentDetails.querySelectorAll('[required]')];if(required.some(input=>!input.value.trim())){required.find(input=>!input.value.trim()).focus();return}const total=document.getElementById('total').textContent,method=document.querySelector('input[name="payment"]:checked').value;cart=[];renderCart();openPanel('confirmationPanel');document.getElementById('confirmationTotal').textContent=(method==='Cash on Delivery'?'Due on delivery: ':'Paid today: ')+total+' · '+method});const accountFields=document.getElementById('accountFields'),accountTitle=document.getElementById('accountTitle'),accountEyebrow=document.getElementById('accountEyebrow'),accountSubmit=document.getElementById('accountSubmit'),accountMessage=document.getElementById('accountMessage');function showAccount(mode='login'){const signup=mode==='signup';document.querySelectorAll('.account-tab').forEach(tab=>tab.classList.toggle('active',tab.dataset.accountMode===mode));accountEyebrow.textContent=signup?'Join the Coffee Nook':'Welcome back';accountTitle.textContent=signup?'Create your account':'Sign in to Coffee Nook';accountSubmit.textContent=signup?'Create Account':'Log In';accountMessage.textContent='';accountFields.innerHTML=(signup?'<label class="panel-label">Full name<input required name="name" placeholder="Your full name"></label><label class="panel-label">Mobile number<input required name="phone" type="tel" placeholder="03XX XXX XXXX"></label>':'')+'<label class="panel-label">Email address<input required name="email" type="email" placeholder="you@example.com"></label><label class="panel-label">Password<input required name="password" type="password" minlength="6" placeholder="At least 6 characters"></label>'}document.querySelectorAll('.account-tab').forEach(tab=>tab.addEventListener('click',()=>showAccount(tab.dataset.accountMode)));document.getElementById('accountForm').addEventListener('submit',event=>{event.preventDefault();const form=event.currentTarget;if(!form.checkValidity()){form.reportValidity();return}const signup=document.querySelector('.account-tab.active').dataset.accountMode==='signup',name=form.elements.name?.value.trim()||form.elements.email.value.split('@')[0];accountMessage.textContent=signup?'Account created. Welcome to Coffee Nook, '+name+'!':'Welcome back, '+name+'!';accountMessage.classList.add('success');setTimeout(closePanels,1100)});showAccount();document.getElementById('continueButton').addEventListener('click',closePanels);renderCart();
+  </script>
+  <script>
+    const menuSearch = document.querySelector('.search-field input');
+    const menuCards = [...document.querySelectorAll('.menu-item')];
+    const noSearchResults = document.getElementById('noSearchResults');
+    menuSearch.addEventListener('input', () => {
+      const query = menuSearch.value.trim().toLowerCase();
+      let visible = 0;
+      menuCards.forEach(card => {
+        const matches = card.textContent.toLowerCase().includes(query);
+        card.hidden = !matches;
+        if (matches) visible++;
+      });
+      noSearchResults.hidden = visible !== 0;
+    });
+  </script>
+  <script>
+    const modeButtons = document.querySelectorAll('.mode');
+    const locationButton = document.querySelector('.location');
+    function isPickup() { return document.querySelector('.mode.active').textContent.trim() === 'Pick-Up'; }
+    function updateFulfilment() {
+      const pickup = isPickup();
+      document.body.classList.toggle('pickup-mode', pickup);
+      locationButton.innerHTML = pickup ? '<span aria-hidden="true">⌖</span> Choose Pick-Up Branch' : '<span aria-hidden="true">⌖</span> Enter Delivery Location';
+      const subtotal = Number(document.getElementById('subtotal').textContent.replace(/[^0-9]/g, ''));
+      const fee = pickup || !subtotal ? 0 : subtotal < 1500 ? 150 : 0;
+      document.getElementById('deliveryFee').textContent = fee ? 'Rs. ' + fee : 'Free';
+      document.getElementById('total').textContent = 'Rs. ' + (subtotal + fee).toLocaleString();
+    }
+    modeButtons.forEach(button => button.addEventListener('click', () => { setTimeout(() => { updateFulfilment(); if (isPickup()) openPanel('pickupPanel'); }, 0); }));
+    locationButton.addEventListener('click', () => { if (isPickup()) openPanel('pickupPanel'); });
+    document.getElementById('savePickup').addEventListener('click', () => { const branch = document.getElementById('pickupBranch').value; locationButton.innerHTML = '<span aria-hidden="true">⌖</span> ' + branch; closePanels(); });
+    document.addEventListener('click', () => setTimeout(updateFulfilment, 0));
+    updateFulfilment();
+  </script>
+  <script>
+    const categoryTabs = [...document.querySelectorAll('.menu-tabs .tab')];
+    let selectedCategory = 'all';
+    function filterMenu() {
+      const query = menuSearch.value.trim().toLowerCase();
+      let visible = 0;
+      menuCards.forEach(card => {
+        const matchesCategory = selectedCategory === 'all' || card.dataset.category === selectedCategory;
+        const matchesSearch = card.textContent.toLowerCase().includes(query);
+        card.hidden = !(matchesCategory && matchesSearch);
+        if (!card.hidden) visible++;
+      });
+      noSearchResults.hidden = visible !== 0;
+    }
+    categoryTabs.forEach(tab => tab.addEventListener('click', event => {
+      event.preventDefault();
+      selectedCategory = tab.getAttribute('href').slice(1);
+      categoryTabs.forEach(item => item.classList.toggle('active', item === tab));
+      filterMenu();
+      document.querySelector('.catalog').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }));
+    menuSearch.addEventListener('input', filterMenu);
+    filterMenu();
+  </script>
+</body>
+</html>
